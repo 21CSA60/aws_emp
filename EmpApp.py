@@ -18,7 +18,6 @@ db_conn = connections.Connection(
 )
 
 output = {}
-table = 'employee'
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
@@ -89,4 +88,4 @@ def GetEmp():
     return render_template('GetEmpOutput.html', data=result)
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.0', port=3306, debug=True)
+    app.run(host='0.0.0.0', port=80, debug=True)
